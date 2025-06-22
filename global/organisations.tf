@@ -2,7 +2,7 @@
 resource "aws_organizations_organization" "root" {
 }
 
-# Create an OU for Identity management
+# #Create an OU for Identity management
 resource "aws_organizations_organizational_unit" "identity" {
   name      = "Identity Management Account"
   parent_id = aws_organizations_organization.root.roots[0].id
