@@ -6,11 +6,11 @@ accounts = {
   },
   identity = {
     name  = "identity"
-    email = "jkamkotoyip@yahoo.com"
+    email = "jkamkotoyip+identity@yahoo.com"
   },
   prod = {
     name  = "prod"
-    email = "santonix@hotmail.it"
+    email = "santonix+prod@hotmail.it"
   },
   staging = {
     name  = "staging"

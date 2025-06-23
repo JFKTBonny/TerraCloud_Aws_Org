@@ -13,7 +13,7 @@ variable "users" {
 
 variable "region" {
   description = "Region of Deployment"
-  default     = "us-east-1"
+  default     = "us-east-2"
 }
 
 variable "domain" {

@@ -52,16 +52,25 @@ resource "helm_release" "lbc" {
   namespace       = "kube-system"
   cleanup_on_fail = true
 
-  dynamic "set" {
-    for_each = {
-      "clusterName"                                               = var.clustername
-      "serviceAccount.name"                                       = "aws-load-balancer-controller"
-      "serviceAccount.annotations.eks\\.amazonaws\\.com/role-arn" = aws_iam_role.aws-load-balancer-controller.arn
+  set = [
+    {
+      name  = "clusterName"
+      value = var.clustername
     }
-    content {
-      name  = set.key
-      value = set.value
-    }
-  }
+  ]
 
+  set = [ 
+
+    {
+      name  = "serviceAccount.name"
+      value = "aws-load-balancer-controller"
+    }
+  ]
+  set = [
+    
+    {
+      name  = "serviceAccount.annotations.eks\\.amazonaws\\.com/role-arn"
+      value = aws_iam_role.aws-load-balancer-controller.arn
+    }
+  ]   
 }

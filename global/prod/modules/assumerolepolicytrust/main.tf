@@ -24,3 +24,4 @@ resource "aws_iam_role_policy_attachment" "default" {
   policy_arn = var.policy_arn[count.index]
   role       = aws_iam_role.default.name
 }
+
