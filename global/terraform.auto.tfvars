@@ -2,15 +2,15 @@
 accounts = {
   dev = {
     name  = "dev"
-    email = "jofranco1203+dev@gmail.com"
+    email = "josephfranciskamkotoyip@gmail.com"
   },
   identity = {
     name  = "identity"
-    email = "jofranco1203+identity@gmail.com"
+    email = "jkamkotoyip@yahoo.com"
   },
   prod = {
     name  = "prod"
-    email = "jofranco1203+prod@gmail.com"
+    email = "santonix@hotmail.it"
   },
   staging = {
     name  = "staging"
